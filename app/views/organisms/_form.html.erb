@@ -1,0 +1,42 @@
+<%= form_with(model: organism, local: true) do |form| %>
+  <% if organism.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(organism.errors.count, "error") %> prohibited this organism from being saved:</h2>
+
+      <ul>
+      <% organism.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data_source_name %>
+    <%= form.text_field :data_source_name, id: :organism_data_source_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :full_name %>
+    <%= form.text_field :full_name, id: :organism_full_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax_id %>
+    <%= form.number_field :tax_id, id: :organism_tax_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tax_lineage %>
+    <%= form.text_field :tax_lineage, id: :organism_tax_lineage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :release_note %>
+    <%= form.text_field :release_note, id: :organism_release_note %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

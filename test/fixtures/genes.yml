@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organism: one
+  gene_name: MyString
+  chromosome_name: MyString
+  start_position: 1
+  end_position: 1
+  orientation: MyString
+  definition: MyString
+
+two:
+  organism: two
+  gene_name: MyString
+  chromosome_name: MyString
+  start_position: 1
+  end_position: 1
+  orientation: MyString
+  definition: MyString

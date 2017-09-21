@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Organism:</strong>
+  <%= @gene.organism %>
+</p>
+
+<p>
+  <strong>Gene name:</strong>
+  <%= @gene.gene_name %>
+</p>
+
+<p>
+  <strong>Chromosome name:</strong>
+  <%= @gene.chromosome_name %>
+</p>
+
+<p>
+  <strong>Start position:</strong>
+  <%= @gene.start_position %>
+</p>
+
+<p>
+  <strong>End position:</strong>
+  <%= @gene.end_position %>
+</p>
+
+<p>
+  <strong>Orientation:</strong>
+  <%= @gene.orientation %>
+</p>
+
+<p>
+  <strong>Definition:</strong>
+  <%= @gene.definition %>
+</p>
+
+<%= link_to 'Edit', edit_gene_path(@gene) %> |
+<%= link_to 'Back', genes_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: gene, local: true) do |form| %>
+  <% if gene.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gene.errors.count, "error") %> prohibited this gene from being saved:</h2>
+
+      <ul>
+      <% gene.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :organism_id %>
+    <%= form.text_field :organism_id, id: :gene_organism_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gene_name %>
+    <%= form.text_field :gene_name, id: :gene_gene_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :chromosome_name %>
+    <%= form.text_field :chromosome_name, id: :gene_chromosome_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :start_position %>
+    <%= form.number_field :start_position, id: :gene_start_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :end_position %>
+    <%= form.number_field :end_position, id: :gene_end_position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :orientation %>
+    <%= form.text_field :orientation, id: :gene_orientation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :definition %>
+    <%= form.text_field :definition, id: :gene_definition %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

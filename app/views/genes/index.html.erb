@@ -19,7 +19,7 @@
   <tbody>
     <% @genes.each do |gene| %>
       <tr>
-        <td><%= gene.organism %></td>
+        <td><%= gene.organism.data_source_name %></td>
         <td><%= gene.gene_name %></td>
         <td><%= gene.chromosome_name %></td>
         <td><%= gene.start_position %></td>

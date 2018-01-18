@@ -1,0 +1,2 @@
+class TextsearchableOrganism < ApplicationRecord
+end

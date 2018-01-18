@@ -1,0 +1,2 @@
+class TextsearchableGene < ApplicationRecord
+end
